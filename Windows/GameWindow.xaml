@@ -1,0 +1,22 @@
+﻿<Window x:Class="RPSLSpock.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RPSLSpock" d:DataContext="{d:DesignInstance Type=local:GameWindowViewModel}"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <Label HorizontalAlignment="Center">Your Score:</Label>
+            <Label x:Name="lb_HumanScore" HorizontalAlignment="Center" Margin="3,3,3,100" ></Label>
+            <Label HorizontalAlignment="Center">Computer Score:</Label>
+            <Label x:Name="lb_AIScore" HorizontalAlignment="Center" Margin="3"></Label>
+        </StackPanel>
+        <Frame x:Name="frm_Display" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

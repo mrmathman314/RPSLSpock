@@ -1,0 +1,51 @@
+﻿<Page x:Class="RPSLSpock.Pages.SelectionPane"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RPSLSpock.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SelectionPane">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="FontFamily" Value="Corbel"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#344"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">Choose Your Fighter</TextBlock>
+        <Button x:Name="btn_Rock" Grid.Column="0" Grid.Row="1" Width="Auto" HorizontalAlignment="Center" Click="btn_Rock_Click">
+            <Image Source="/Assets/rock.png" Stretch="Uniform"></Image>
+        </Button>
+        <Button x:Name="btn_Paper" Grid.Column="1" Grid.Row="1" Width="Auto" HorizontalAlignment="Center" Click="btn_Paper_Click">
+            <Image Source="/Assets/paper.png" Stretch="Uniform"></Image>
+        </Button>
+        <Button x:Name="btn_Scissors" Grid.ColumnSpan="2" Grid.Row="2" Width="Auto" HorizontalAlignment="Center" Click="btn_Scissors_Click">
+            <Image Source="/Assets/Scissors.png" Stretch="Uniform"></Image>
+        </Button>
+        <Button x:Name="btn_Lizard" Grid.Column="0" Grid.Row="3" Width="Auto" HorizontalAlignment="Center" Click="btn_Lizard_Click">
+            <Image Source="/Assets/Lizard.png" Stretch="Uniform"></Image>
+        </Button>
+        <Button x:Name="btn_Spock" Grid.Column="1" Grid.Row="3" Width="Auto" HorizontalAlignment="Center" Click="btn_Spock_Click">
+            <Image Source="/Assets/spock.png" Stretch="Uniform"></Image>
+        </Button>
+    </Grid>
+</Page>
